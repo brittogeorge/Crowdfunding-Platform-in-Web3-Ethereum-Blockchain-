@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('C:\Users\britt\OneDrive\Desktop\Insurance Fraud\public\images\cos.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: bgZoomIn 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: top;
+  transform: scale(2);
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes bgZoomIn {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bgZoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+
+
+@keyframes textAnimation {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+.text-animation {
+  fill: transparent;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@font-face {
+  font-family: 'Cirqua';
+  src: url('C:\Users\britt\OneDrive\Desktop\Insurance Fraud\public\assets\Cirqua.ttf') format('truetype'); 
+  font-style: normal; 
+  font-weight: 300;
+  text-align: center;
+}
+
+
+.background {
+  background-color: #7948ff;
+  
+}
+
+.backgroundMain1{
+  position:fixed;
+  background:url(../public/images/cos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:0;
+  width: 100%;
+  z-index:1000;
+}
+
+.logo{
+  width: 100px;
+  height: 70px;
+}
+.menulist{
+  align-items: center;
+}
+.menulist ul{
+  text-align: center;
+  font-size:large;
+  font-weight: bold;
+  margin-left:150px;
+}
+
+.menulist ul li{
+  padding-right: 20px;
+}
+
+.navlogo{
+  display:flex;
+}
+.logoimg{
+  height: 20px;
+  margin-right: 10px;
+}
+
+.backgroundMain {
+  background-image: url('../public/images/cos.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.home{
+   margin-top: 90px;
+   width: 40%;
+  
+}
+
+.newColor {
+  color: #1a1a1a;
+}
+
+.coverLine {
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  bottom: -1.9rem;
+  z-index: 3;
+
+}
+
+.car{
+  background:url('../public/images/ba.jpg');
+  color:rgb(255, 255, 255);
+  width:100%;
+}
+
+.col{
+  color:rgb(255, 255, 255);
+  padding: 3px;
+}
+
+.mos{
+  src:url('../public/assets/Cirqua.ttf');
+}
+
+.bor{
+  background-color: black;
+  box-shadow: 1px 8px 10px 10px #941bff;
+  margin-right: 30px;
+  border-radius:40px;
+  animation: rotate-shadow-clockwise 3s linear infinite;
+}
+
+@keyframes rotate-shadow-clockwise {
+  0% {
+    box-shadow: 0 8px 15px #941bff;
+  }
+  25% {
+    box-shadow: 15px 15px 15px #941bff;
+  }
+  50% {
+    box-shadow: 15px 0 15px #941bff;
+  }
+  75% {
+    box-shadow: 10px -10px 15px #941bff;
+  }
+  100% {
+    box-shadow: 0 -8px 15px #941bff;
+  }
+}
+
+.tex{
+  font-size: large;
+  background-color: #1a1a1a;
+  color:#fff;
+}
+
